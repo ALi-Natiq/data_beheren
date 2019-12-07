@@ -25,10 +25,11 @@ public:
     void setDeposit(int deposit) {
           this->deposit = deposit;
        }
+    
+    virtual void modify() {}  //function to get new data from user
+    virtual void create_account() {}
 
-    void create_account();
-
-    void show_account() const	;//function to show data on screen
+    void show_account() const	{}//function to show data on screen
 
 
 
