@@ -25,11 +25,23 @@ public:
     void setDeposit(int deposit) {
           this->deposit = deposit;
        }
-    
-    virtual void modify() {}  //function to get new data from user
+
+    string rettype() const {
+            return type;
+        } //function to return type of account
+
+
+
+    virtual void modify() {} //function to get new data from user
     virtual void create_account() {}
 
-    void show_account() const	{}//function to show data on screen
+    virtual void show_account() const	{
+        cout<<"\nAccount No. : "<<acno;
+        cout<<"\nAccount Holder Name : ";
+        cout<<name;
+        cout<<"\nType of Account : "<<type;
+        cout<<"\nBalance amount : "<<deposit;
+    }//function to show data on screen
 
 
 
