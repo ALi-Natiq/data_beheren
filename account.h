@@ -6,9 +6,12 @@ using namespace std;
 class account
 {
 private:
+    int mobile_number;
+    int age;
     string name;
     int deposit;
-public:
+public:   
+
     int acno;
     string type;
     inline string getName(){
@@ -33,20 +36,13 @@ public:
 
 
     virtual void modify() {} //function to get new data from user
-    virtual void create_account() {}
+    virtual void create_account() {} //function to create the account
+    virtual void show_account() const	{}//function to show data on screen
 
-    virtual void show_account() const	{
-        cout<<"\nAccount No. : "<<acno;
-        cout<<"\nAccount Holder Name : ";
-        cout<<name;
-        cout<<"\nType of Account : "<<type;
-        cout<<"\nBalance amount : "<<deposit;
-    }//function to show data on screen
 
 
 
 account();
-    
 };
 
 #endif // BANK_ACCOUNT_H
